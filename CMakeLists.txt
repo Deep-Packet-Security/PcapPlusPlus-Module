@@ -3,6 +3,20 @@ cmake_minimum_required(VERSION 3.12)
 
 set(PCAPPP_VERSION "24.09")
 
+################################################################################################
+# DeepPacketSecurity Configuration Starts Here
+# Path to the configuration file
+set(CONFIG_FILE "${CMAKE_SOURCE_DIR}/config.cmake")
+
+# Include the configuration file
+if(EXISTS ${CONFIG_FILE})
+  include(${CONFIG_FILE})
+else()
+  message(FATAL_ERROR "Configuration file not found: ${CONFIG_FILE}")
+endif()
+# DeepPacketSecurity Configuration Ends Here
+################################################################################################
+
 # MAIN_PROJECT CHECK
 set(PCAPPP_MAIN_PROJECT OFF)
 if(CMAKE_CURRENT_SOURCE_DIR STREQUAL CMAKE_SOURCE_DIR)
