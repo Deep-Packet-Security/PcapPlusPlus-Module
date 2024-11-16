@@ -6,7 +6,7 @@ set(PCAPPP_VERSION "24.09")
 ################################################################################################
 # DeepPacketSecurity Configuration Starts Here
 # Path to the configuration file
-set(CONFIG_FILE "${CMAKE_SOURCE_DIR}/config.cmake")
+set(CONFIG_FILE "${CMAKE_CURRENT_SOURCE_DIR}/config.cmake")
 
 # Include the configuration file
 if(EXISTS ${CONFIG_FILE})
